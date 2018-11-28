@@ -35,14 +35,12 @@ public class DPPlugin extends CordovaPlugin {
             return true;
         }
 		
-		if (action.equals("connect")){Log.i("DP","HOLA MUNDO");
+		if (action.equals("connect")){			
 			Context context = cordova.getActivity().getApplicationContext();
             DPManager.getInstance().initialize2(context, getDPManagerCallback(context, callbackContext));
             PluginResult pluginResult = new PluginResult(PluginResult.Status.NO_RESULT);
             callbackContext.sendPluginResult(pluginResult);
-            
-			return true;
-			
+            return true;			
         }
 		
 
